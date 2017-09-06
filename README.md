@@ -11,7 +11,7 @@ JAVA Programing
       - 함수를 최소단위로 나누는 것이 좋다.<br>
       - 퍼포먼스 경우에는 함수를 나누는 것이 더 늦어질 수 있지만(함수 pointer로 인해)<br>코드의 의미를 부여하기 때문에 나중에 해석하기 좋다. (유지보수 측면에서)
 
-  - [조건문 및 반복문]() ([예제: 반복문과 조건문으로 다양한 문양 출력]())
+  - [조건문 및 반복문](https://github.com/Hooooong/DAY2_Change/blob/master/src/ControlFlow.java)
 
       - 조건문 (if, switch)
         ```java
@@ -62,3 +62,51 @@ JAVA Programing
         //조건을 비교하지 않고 do 블록을 무조건 한번 실행한 후 조건을 비교한다.
         }while(조건식);
         ```
+
+  - 인터페이스 규칙
+
+      - 인터페이스란?
+
+        >Interface를 어원을 찾아보면 Inter(중간) + face(맞대고 있는)이다. 어느 중간 사이에서 맞대고 있는 부분을 의미한다. User Interface란 사용자와 컴퓨터 사이에서 일어나는 상호작용을 매개하는 것을 말한다. 객체 지향 언어에서도 인터페이스란 객체와 객체 사이에서 일어나는 사이에서 상호 작용의 매개로 쓰인다.
+Java에서는 Interface라는 키워드를 통해서 Interface를 생성할 수 있다. Interface로 할 수 있는 일이 무엇이냐 하면 클래스의 기본 틀을 제공하면서 다른 객체 사이에서의 중간 매개 역할도 담당한다는 것이다.
+
+        - 'code 가 없는 정의서' 라고 볼 수 있다.
+        - 하나의 인터페이스에 여러개의 메소드를 정의하는 것보다는 하나의 인터페이스에 1~2개 메소드를 정의하는 것이 좋다.
+
+      - [인터페이스 규칙](https://github.com/Hooooong/DAY2_Change/tree/master/src/design)
+
+        ```java
+        // 인터페이스를 설계하는 방법
+        // 접근제한자 + interface + 이름
+        public interface IChange {
+        	public void calc(int pay, int buy);
+        	public default void move() {
+        		System.out.println("뿌잉");
+        	}
+
+        	public static void close() {
+        		System.out.println("뿡");
+        	}
+        }
+
+        interface INewChange {
+
+        }
+
+        // 현재 다른 파일....
+        // 인터페이스를 구현하기
+        // 접근제한자 + class + 이름 + implements + 인터페이스이름
+        class ChangeImpl implements IChange, INewChange{
+
+        	@Override
+        	public void calc(int pay, int buy) {
+        		// 구현단의 코드를 작성하는 방법
+
+        	}
+        }
+        ```
+        
+#### 예제
+
+  - [잔돈 구하기](https://github.com/Hooooong/DAY2_Change/blob/master/src/Change.java)
+  - [반복문과 조건문으로 다양한 문양 출력](https://github.com/Hooooong/DAY2_Change/tree/master/src/testContorlFlow)
