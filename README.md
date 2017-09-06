@@ -1,6 +1,14 @@
 JAVA Programing
 ----------------------------------------------------
 #### 2일차
+
+###### 예제
+____________________________________________________
+
+  - [잔돈 구하기](https://github.com/Hooooong/DAY2_Change/blob/master/src/Change.java)
+  - [반복문과 조건문으로 다양한 문양 출력](https://github.com/Hooooong/DAY2_Change/tree/master/src/testContorlFlow)
+
+###### 공부정리
 ____________________________________________________
   - 객체지향이란?
 
@@ -105,9 +113,3 @@ Java에서는 Interface라는 키워드를 통해서 Interface를 생성할 수 
         	}
         }
         ```
-
-#### 예제
-____________________________________________________
-
-  - [잔돈 구하기](https://github.com/Hooooong/DAY2_Change/blob/master/src/Change.java)
-  - [반복문과 조건문으로 다양한 문양 출력](https://github.com/Hooooong/DAY2_Change/tree/master/src/testContorlFlow)
